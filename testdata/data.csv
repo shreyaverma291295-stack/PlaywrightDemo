@@ -1,0 +1,5 @@
+email,psw,validity
+shreya.verma@gmail.com,Anshu@123,valid
+shreya.verma1@gmail.com,Anshu@123,invalid
+shreya.verma@gmail.com,Anshu@12,invalid
+,,invalid

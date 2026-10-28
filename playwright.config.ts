@@ -15,14 +15,15 @@ export default defineConfig({
   testDir: './EndToEndTests',
   timeout: 60000,//added timeout default for test by Shreya
   /* Run tests in files in parallel */
-  fullyParallel: false, //Changed by Shreya for serial execution
+  //fullyParallel: true, //Changed by Shreya for serial execution
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
   retries: process.env.CI ? 2 : 0,
 
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  //orkers: process.env.CI ? 1 : undefined,//commented by shreya
+  //workers:3,//added by shreya
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
@@ -37,6 +38,7 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry", //added by Shreya
+    headless:false //Added by Shreya
   },
 
   /* Configure projects for major browsers */
@@ -44,11 +46,13 @@ export default defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
+      fullyParallel: true
     },
 
     /* {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
+      
     },
 
     {

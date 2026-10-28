@@ -1,0 +1,23 @@
+
+[
+    {
+        "email": "shreya.verma@gmail.com",
+        "psw": "Anshu@123",
+        "validity": "valid"
+    },
+    {
+        "email": "shreya.verma1@gmail.com",
+        "psw": "Anshu@123",
+        "validity": "Invalid"
+    },
+    {
+        "email": "shreya.verma@gmail.com",
+        "psw": "Anshu@12",
+        "validity": "Invalid"
+    },
+    {
+        "email": "",
+        "psw": "",
+        "validity": "Invalid"
+    }
+]
